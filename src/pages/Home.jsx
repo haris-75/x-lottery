@@ -6,7 +6,7 @@ import play from '../assets/play.png';
 export default function HomePage() {
   return (
     <Container className='bg-white-secondary'>
-      <div className='pt-[20px] pb-[120px] flex xl:gap-[40px] lg:gap-[18px] justify-center sm:flex-row flex-col items-center '>
+      <div className='pt-[20px] pb-[50px] flex xl:gap-[40px] lg:gap-[18px] justify-center sm:flex-row flex-col items-center '>
         <div className='flex flex-col pb-8'>
           <div className='xl:max-w-[600px] lg:max-w-[500px] sm:max-w-[300px] lg:mb-[48px] mb-[32px] '>
             <h1 className='xl:text-7xl lg:text-6xl md:text-4xl text-3xl font-poppins font-bold text-black mb-6'>
