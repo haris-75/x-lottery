@@ -1,8 +1,7 @@
-import React from 'react';
 import Container from '../components/Container';
 import Button from '../components/Button';
 import Add from '../assets/add.svg';
-import Subtract from '../assets/subtract.svg';
+// import Subtract from '../assets/subtract.svg';
 
 const ItemCard = ({ text }) => (
   <div className='w-full flex sm:py-4 sm:px-2 py-2 px-1 rounded-full bg-white-secondary justify-between max-w-[500px]'>
