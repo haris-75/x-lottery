@@ -1,20 +1,48 @@
 import Container from '../components/Container';
 import Button from '../components/Button';
 import Add from '../assets/add.svg';
-// import Subtract from '../assets/subtract.svg';
+import { useState } from 'react';
+import Subtract from '../assets/subtract.svg';
 
-const ItemCard = ({ text }) => (
-  <div className='w-full flex sm:py-4 sm:px-2 py-2 px-1 rounded-full bg-white-secondary justify-between max-w-[500px]'>
-    <p className='font-semibold lg:text-base md:text-sm text-xs ml-2'>{text}</p>
-    <div className='cursor-pointer'>
-      <img
-        className='w-[20px]'
-        src={Add}
-        alt='add-icon'
-      />
+const ItemCard = ({ text }) => {
+  const [cardOpen, setCardOpen] = useState(false);
+  return (
+    <div
+      className={`w-full flex flex-col sm:p-3 p-2  ${
+        cardOpen
+          ? 'bg-white shadow-xl rounded-3xl'
+          : 'bg-white-secondary rounded-full'
+      } justify-between max-w-[500px] gap-2`}
+    >
+      <div className='flex justify-between'>
+        <h1 className='font-semibold lg:text-base md:text-sm text-xs ml-2'>
+          {text}
+        </h1>
+
+        <div
+          className='cursor-pointer'
+          onClick={() => setCardOpen((prevState) => !prevState)}
+        >
+          <img
+            className='w-[20px]'
+            src={cardOpen ? Subtract : Add}
+            alt='add-icon'
+          />
+        </div>
+      </div>
+      {cardOpen ? (
+        <p className='font-light lg:text-sm md:text-xs text-[10px] ml-2'>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      ) : (
+        ''
+      )}
     </div>
-  </div>
-);
+  );
+};
 
 export default function WelcomePage() {
   return (
