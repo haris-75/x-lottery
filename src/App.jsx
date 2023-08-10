@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import Footer from './pages/Footer';
 import HomePage from './pages/Home';
 import LotteryLifeCycle from './pages/LotteryLifeCycle';
 import WelcomePage from './pages/Welcome';
@@ -16,6 +17,7 @@ function App() {
       <WelcomePage />
       <WinPage />
       <WhyPage />
+      <Footer />
     </>
   );
 }
