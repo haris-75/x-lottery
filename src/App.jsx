@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import Footer from './pages/Footer';
+import Footer from './pages/Footer/index';
 import HomePage from './pages/Home';
 import LotteryLifeCycle from './pages/LotteryLifeCycle';
 import WelcomePage from './pages/Welcome';

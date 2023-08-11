@@ -1,12 +1,12 @@
-import React from 'react';
-import logo from '../assets/xlottery-03.png';
-import Container from '../components/Container';
-import Button from '../components/Button';
-import loc from '../assets/loc.png';
-import fb from '../assets/facebook.png';
-import insta from '../assets/instagram.png';
-import twitter from '../assets/twitter.png';
-import pinterest from '../assets/pinterest.png';
+import logo from '../../assets/xlottery-03.png';
+import Container from '../../components/Container';
+import Button from '../../components/Button';
+import loc from '../../assets/loc.png';
+import fb from '../../assets/facebook.png';
+import insta from '../../assets/instagram.png';
+import twitter from '../../assets/twitter.png';
+import pinterest from '../../assets/pinterest.png';
+import FooterForm from './FooterForm';
 
 const AddressComponent = ({ title, textPrimary, textSecondary }) => (
   <div>
@@ -24,9 +24,8 @@ const AddressComponent = ({ title, textPrimary, textSecondary }) => (
 export default function Footer() {
   return (
     <Container className='bg-black'>
-      <div className='pt-[20px] pb-[50px]'>
-        {/* Form */}
-        <div></div>
+      <div className='pt-[20px] pb-[50px] flex md:flex-row flex-col justify-between'>
+        <FooterForm />
         <div className='text-white flex flex-col gap-8'>
           <div>
             <div>

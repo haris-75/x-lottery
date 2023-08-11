@@ -38,7 +38,7 @@ const ItemCard = ({ title, text }) => (
 export default function WhyPage() {
   return (
     <Container>
-      <div className='flex flex-col justify-between items-center pt-[50px] pb-[50px] md:gap-6 gap-5'>
+      <div className='flex flex-col justify-between items-center pt-[50px] pb-[150px] md:gap-6 gap-5'>
         <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
           Why Choose xLottery
         </h1>
