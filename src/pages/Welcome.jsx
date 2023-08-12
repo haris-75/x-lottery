@@ -4,12 +4,11 @@ import Add from '../assets/add.svg';
 import { useState } from 'react';
 import Subtract from '../assets/subtract.svg';
 
-const ItemCard = ({ text }) => {
-  const [cardOpen, setCardOpen] = useState(false);
+const ItemCard = ({ text, cardOpen, setCardOpen }) => {
   return (
     <div
       className={`w-full flex flex-col sm:p-3 p-2  ${
-        cardOpen
+        cardOpen === text
           ? 'bg-white shadow-card rounded-3xl'
           : 'bg-white-secondary rounded-full'
       } justify-between max-w-[500px] gap-2`}
@@ -21,16 +20,18 @@ const ItemCard = ({ text }) => {
 
         <div
           className='cursor-pointer'
-          onClick={() => setCardOpen((prevState) => !prevState)}
+          onClick={() =>
+            setCardOpen((prevState) => (prevState === text ? '' : text))
+          }
         >
           <img
             className='w-[20px]'
-            src={cardOpen ? Subtract : Add}
+            src={cardOpen === text ? Subtract : Add}
             alt='add-icon'
           />
         </div>
       </div>
-      {cardOpen ? (
+      {cardOpen == text ? (
         <p className='font-light lg:text-sm md:text-xs text-[10px] ml-2'>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
@@ -45,8 +46,9 @@ const ItemCard = ({ text }) => {
 };
 
 export default function WelcomePage() {
+  const [cardOpen, setCardOpen] = useState('');
   return (
-    <Container>
+    <Container id='welcome'>
       <div className='flex md:flex-row flex-col justify-between items-center pt-[50px] pb-[50px] md:gap-0 gap-6'>
         <div className='flex flex-col gap-8'>
           <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
@@ -91,6 +93,8 @@ export default function WelcomePage() {
             <ItemCard
               text={ele}
               key={ele}
+              cardOpen={cardOpen}
+              setCardOpen={setCardOpen}
             />
           ))}
         </div>

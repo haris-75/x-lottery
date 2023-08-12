@@ -6,7 +6,7 @@ import Button from '../Button';
 import { navList } from '../../constants';
 export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false);
-  const selectedPage = 'home';
+  const [selectedPage, setSelectedPage] = useState('home');
   return (
     <>
       <div className='flex z-50 sticky top-0 justify-between py-6 xl:px-[100px] lg:px-[60px] md:px-6 sm:px-10 px-8 bg-white-secondary'>
@@ -28,8 +28,9 @@ export default function Navbar() {
                     ? 'font-semibold border-b-2 border-yellow-400'
                     : ''
                 } uppercase`}
+                onClick={() => setSelectedPage(ele)}
               >
-                {ele}
+                <a href={`#${ele}`}>{ele}</a>
               </li>
             ))}
             <li>

@@ -3,9 +3,22 @@ import Container from '../components/Container';
 import googlePlay from '../assets/googleplay.png';
 import appStore from '../assets/googleplay.png';
 import play from '../assets/play.png';
+import { useState } from 'react';
+import VideoModal from '../components/VideoModal';
 export default function HomePage() {
+  const [showModal, setShowModal] = useState(false);
+  const setShowModalHandler = (flag) => {
+    setShowModal(flag);
+    let ele = document.getElementsByTagName('body')[0];
+    if (ele.classList.contains('overflow-hidden'))
+      ele.classList.remove('overflow-hidden');
+    else ele.classList.add('overflow-hidden');
+  };
   return (
-    <Container className='bg-white-secondary'>
+    <Container
+      className='bg-white-secondary'
+      id='home'
+    >
       <div className='pt-[20px] pb-[50px] flex xl:gap-[40px] lg:gap-[18px] justify-center sm:flex-row flex-col items-center '>
         <div className='flex flex-col pb-8'>
           <div className='xl:max-w-[600px] lg:max-w-[500px] sm:max-w-[300px] lg:mb-[48px] mb-[32px] '>
@@ -41,14 +54,15 @@ export default function HomePage() {
             src={HomePageImage}
             alt='home-page-img'
           />
-          <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+          <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 '>
             <div className='md:p-[16px] sm:p-[10px] p-[16px] bg-transparent rounded-full border-[1px] border-[#ffffffcf]'>
               <div className='md:p-[16px] sm:p-[10px] p-[16px] bg-transparent rounded-full border-[1.5px] border-[#ffffffcf]'>
-                <div className='md:py-[26px] md:pr-[26px] md:pl-[30px] sm:py-[15px] sm:pr-[15px] sm:pl-[17px] py-[26px] pr-[26px] pl-[30px] bg-[#ffffffcf] rounded-full'>
+                <div className='md:py-[26px] md:pr-[26px] md:pl-[30px] sm:py-[15px] sm:pr-[15px] sm:pl-[17px] py-[26px] pr-[26px] pl-[30px] bg-[#ffffffcf] rounded-full cursor-pointer'>
                   <img
                     className='sm:w-[20px] md:w-full w-full'
                     src={play}
                     alt='play-button'
+                    onClick={() => setShowModalHandler(true)}
                   />
                 </div>
               </div>
@@ -56,6 +70,11 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      {showModal ? (
+        <VideoModal onClose={() => setShowModalHandler(false)} />
+      ) : (
+        ''
+      )}
     </Container>
   );
 }

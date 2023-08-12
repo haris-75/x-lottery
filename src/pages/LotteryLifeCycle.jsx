@@ -44,7 +44,7 @@ const LotteryPhaseCard = ({ imageSrc, title, text, number, positionClass }) => (
 
 export default function LotteryLifeCycle() {
   return (
-    <Container>
+    <Container id='lottery'>
       <div className='flex-col justify-center items-center pt-[50px] pb-[50px] flex xl:gap-[40px] lg:gap-[30px] gap-[25px]'>
         <div className='flex flex-col items-center text-center justify-center lg:gap-5 md:gap-4 gap-3'>
           <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl capitalize '>
@@ -86,6 +86,7 @@ export default function LotteryLifeCycle() {
             positionClass='-bottom-[45px] -right-[11px]'
           />
         </div>
+        {/* <div className='relative flex overflow-x-hidden'> */}
         <div className='flex flex-col sm:flex-row w-full justify-between items-center sm:gap-0 gap-8 lg:py-8 md:py-6 py-4'>
           <ImageContainer
             src={nvidia}
@@ -123,6 +124,44 @@ export default function LotteryLifeCycle() {
             classes='lg:w-[80px] md:w-[55px] sm:w-[40px]'
           />
         </div>
+        {/* <div className='absolute top-0 flex flex-col animate-marquee overflow-x-hidden sm:flex-row w-full justify-between items-center sm:gap-0 gap-8 lg:py-8 md:py-6 py-4'>
+            <ImageContainer
+              src={nvidia}
+              alt='nvidia-logo'
+              classes='lg:w-[100px] md:w-[70px] sm:w-[50px]'
+            />
+            <ImageContainer
+              src={playstation}
+              alt='playstation-logo'
+              classes='lg:w-[100px] md:w-[70px] sm:w-[50px]'
+            />
+            <ImageContainer
+              src={amd}
+              alt='amd-logo'
+              classes='lg:w-[70px] md:w-[50px] sm:w-[35px]'
+            />
+            <ImageContainer
+              src={asus}
+              alt='asus-logo'
+              classes='lg:w-[120px] md:w-[85px] sm:w-[60px]'
+            />
+            <ImageContainer
+              src={xbox}
+              alt='xbox-logo'
+              classes='lg:w-[80px] md:w-[55px] sm:w-[40px]'
+            />
+            <ImageContainer
+              src={nintendo}
+              alt='nintendo-logo'
+              classes='lg:w-[80px] md:w-[55px] sm:w-[40px]'
+            />
+            <ImageContainer
+              src={razor}
+              alt='razor-logo'
+              classes='lg:w-[80px] md:w-[55px] sm:w-[40px]'
+            />
+          </div>
+        </div> */}
       </div>
     </Container>
   );

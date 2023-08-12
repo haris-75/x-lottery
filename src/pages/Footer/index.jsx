@@ -23,7 +23,10 @@ const AddressComponent = ({ title, textPrimary, textSecondary }) => (
 
 export default function Footer() {
   return (
-    <Container className='bg-black'>
+    <Container
+      className='bg-black'
+      id='support'
+    >
       <div className='pt-[20px] pb-[50px] flex md:flex-row flex-col justify-between lg:gap-12 md:gap-8 '>
         <FooterForm />
         <div className='text-white flex flex-col gap-8 justify-self-center'>

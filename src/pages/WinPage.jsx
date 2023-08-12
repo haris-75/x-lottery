@@ -2,7 +2,10 @@ import background from '../assets/bigwinbg.png';
 
 export default function WinPage() {
   return (
-    <div className='relative'>
+    <section
+      id='big-win'
+      className='relative'
+    >
       <img
         className='w-screen sm:block hidden'
         src={background}
@@ -21,6 +24,6 @@ export default function WinPage() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

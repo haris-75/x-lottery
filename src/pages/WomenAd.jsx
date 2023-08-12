@@ -2,7 +2,10 @@ import background from '../assets/labybg.png';
 
 export default function WomenAd() {
   return (
-    <div className='relative'>
+    <section
+      className='relative'
+      id='women-ad'
+    >
       <img
         className='w-screen sm:block hidden'
         src={background}
@@ -20,6 +23,6 @@ export default function WomenAd() {
           typesetting, remaining essentially unchanged.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
