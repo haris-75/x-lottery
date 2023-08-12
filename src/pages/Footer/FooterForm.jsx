@@ -16,7 +16,7 @@ export default function FooterForm() {
     alert(`Here's your data: ${JSON.stringify(data, undefined, 2)}`);
   }
   return (
-    <div className='text-black bg-white lg:p-8 md:p-6 py-4 px-8 rounded-3xl -translate-y-[100px] shadow-xl'>
+    <div className='text-black bg-white lg:p-8 md:p-6 py-4 px-8 rounded-3xl -translate-y-[100px] shadow-card'>
       <div className='flex flex-col gap-4 text-center xl:max-w-[500px] lg:max-w-[400px] md:max-w-[350px] md:mb-8 mb-4 mx-auto'>
         <h1 className='font-semibold lg:text-xl text-base capitalize'>
           leave a message
@@ -36,17 +36,20 @@ export default function FooterForm() {
             type='text'
             label='First Name'
             id='first-name'
+            required
           />
           <Input
             type='text'
             label='Last Name'
             id='last-name'
+            required
           />
         </div>
         <Input
           type='email'
           label='Email'
           id='email'
+          required
         />
         <Input
           type='text'
@@ -57,17 +60,20 @@ export default function FooterForm() {
           type='text'
           label='Subject'
           id='subject'
+          required
         />
         <Input
           type='textarea'
           label='Message'
           id='message'
+          required
         />
         <div className='m-auto'>
           <Button
             text='Start Now'
             backgroundColor='bg-primary'
             textColor='text-white'
+            boxShadow
           />
         </div>
       </form>

@@ -10,7 +10,7 @@ const ItemCard = ({ text }) => {
     <div
       className={`w-full flex flex-col sm:p-3 p-2  ${
         cardOpen
-          ? 'bg-white shadow-xl rounded-3xl'
+          ? 'bg-white shadow-card rounded-3xl'
           : 'bg-white-secondary rounded-full'
       } justify-between max-w-[500px] gap-2`}
     >
@@ -76,6 +76,7 @@ export default function WelcomePage() {
               text='Start Now'
               backgroundColor='bg-primary'
               textColor='text-white'
+              boxShadow
             />
           </div>
         </div>

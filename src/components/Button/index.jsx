@@ -5,6 +5,7 @@ export default function Button({
   textColor,
   iconClass,
   onClick,
+  boxShadow,
 }) {
   return (
     <button
@@ -13,7 +14,7 @@ export default function Button({
           ? 'rounded-full px-[0.75rem] py-[0.65rem]'
           : ' rounded-3xl lg:px-10 lg:py-2.5  sm:py-1.5 sm:px-3 py-1 px-3'
       } font-poppins font-medium 
-      lg:text-base md:text-sm justify-center`}
+      lg:text-base md:text-sm justify-center ${boxShadow ? 'shadow-btn' : ''}`}
       onClick={onClick}
     >
       {icon ? (

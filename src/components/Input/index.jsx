@@ -1,18 +1,26 @@
-export default function Input({ type, id, label }) {
+export default function Input({ type, id, label, required }) {
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
+      <label
+        className='pl-2'
+        htmlFor={id}
+      >
+        {label}
+        {required ? <span className='ml-1 text-red-600'>*</span> : ''}
+      </label>
       {type === 'textarea' ? (
         <textarea
-          className='border-b-2 py-1 w-full mt-2 h-[100px]'
+          className='pl-2 border-b-2 py-1 w-full mt-2 h-[100px]'
           type={type}
           id={id}
+          required={required}
         />
       ) : (
         <input
-          className='border-b-2 py-1 w-full mt-2'
+          className='pl-2 border-b-2 py-1 w-full mt-2'
           type={type}
           id={id}
+          required={required}
         />
       )}
     </div>

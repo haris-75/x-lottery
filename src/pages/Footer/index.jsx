@@ -24,9 +24,9 @@ const AddressComponent = ({ title, textPrimary, textSecondary }) => (
 export default function Footer() {
   return (
     <Container className='bg-black'>
-      <div className='pt-[20px] pb-[50px] flex md:flex-row flex-col justify-between'>
+      <div className='pt-[20px] pb-[50px] flex md:flex-row flex-col justify-between lg:gap-12 md:gap-8 '>
         <FooterForm />
-        <div className='text-white flex flex-col gap-8'>
+        <div className='text-white flex flex-col gap-8 justify-self-center'>
           <div>
             <div>
               <img
@@ -35,13 +35,13 @@ export default function Footer() {
                 alt='x-lottery-logo'
               />
             </div>
-            <p className='lg:max-w-[500px] md:max-w-[300px] max-w-[200px]'>
+            <p className='lg:max-w-[500px] md:max-w-[400px] '>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry standard dummy text
               ever since the 1500s.
             </p>
           </div>
-          <div className='flex w-full justify-between'>
+          <div className='flex lg:flex-row md:flex-col w-full justify-between gap-4'>
             <AddressComponent
               title='Contact'
               textPrimary='(012) 345-6789'

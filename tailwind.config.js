@@ -13,6 +13,10 @@ export default {
         white: '#FFFFFF',
         'white-secondary': '#fef4f1',
       },
+      boxShadow: {
+        card: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)',
+        btn: '0px 8px 24px 0px rgba(286, 80, 13, 0.5)',
+      },
     },
     screens: {
       xs: '380px',

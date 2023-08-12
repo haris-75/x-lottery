@@ -21,7 +21,7 @@ const ImageContainer = ({ src, alt, classes }) => (
 );
 
 const LotteryPhaseCard = ({ imageSrc, title, text, number, positionClass }) => (
-  <div className='flex flex-col items-center lg:gap-5 md:gap-3 gap-2 relative shadow-2xl p-8 rounded-3xl w-fit'>
+  <div className='flex flex-col items-center lg:gap-5 md:gap-3 gap-2 relative shadow-card p-8 rounded-3xl w-fit'>
     <div>
       <img
         src={imageSrc}
