@@ -1,5 +1,6 @@
 import Input from '../../components/Input';
 import Button from '../../components/Button/index';
+import { sendEmail } from '../../api';
 
 export default function FooterForm() {
   function handleSubmit(event) {
@@ -13,7 +14,7 @@ export default function FooterForm() {
       subject: elements.namedItem('subject').value,
       message: elements.namedItem('message').value,
     };
-    alert(`Here's your data: ${JSON.stringify(data, undefined, 2)}`);
+    sendEmail(data);
   }
   return (
     <div className='text-black bg-white lg:p-8 md:p-6 py-4 px-8 rounded-3xl -translate-y-[100px] shadow-card'>
