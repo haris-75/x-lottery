@@ -3,11 +3,10 @@ import Container from '../components/Container';
 import googlePlay from '../assets/googleplay.png';
 import appStore from '../assets/googleplay.png';
 import play from '../assets/play.png';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import VideoModal from '../components/VideoModal';
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
-  const [addAnimation, setAddAnimation] = useState(true);
   const setShowModalHandler = (flag) => {
     setShowModal(flag);
     let ele = document.getElementsByTagName('body')[0];
@@ -15,14 +14,6 @@ export default function HomePage() {
       ele.classList.remove('overflow-hidden');
     else ele.classList.add('overflow-hidden');
   };
-  useEffect(() => {
-    let interval = setTimeout(() => {
-      setAddAnimation(false);
-    }, 2000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
   return (
     <Container
       className='bg-white-secondary'

@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Marquee Animation */
+/* Slider Animation */
 
 @keyframes scroll {
   0% {
@@ -24,41 +24,40 @@ html {
   overflow: hidden;
   position: relative;
   margin-top: 1rem;
+}
+.slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
 
-  &::before,
-  &::after {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    content: '';
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-  }
+.slide {
+  width: 250px;
+}
 
-  &::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
+.slider::after,
+.slider::before {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: '';
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
 
-  &::before {
-    left: 0;
-    top: 0;
-  }
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
 
-  .slide-track {
-    animation: scroll 40s linear infinite;
-    display: flex;
-    width: calc(250px * 14);
-  }
-
-  .slide {
-    width: 250px;
-  }
+.slider::before {
+  left: 0;
+  top: 0;
 }
 
 /* Hero Text Animation */
