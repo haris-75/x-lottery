@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <HomePage />
       <LotteryLifeCycle />
-      <WomenAd />
+      {/* <WomenAd /> */}
       <WelcomePage />
       <WinPage />
       <WhyPage />

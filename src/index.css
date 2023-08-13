@@ -6,6 +6,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Parallelx */
+
+.parallax-women {
+  background-image: url('./assets/labybg.png');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Slider Animation */
 
 @keyframes scroll {
