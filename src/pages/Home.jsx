@@ -3,10 +3,11 @@ import Container from '../components/Container';
 import googlePlay from '../assets/googleplay.png';
 import appStore from '../assets/googleplay.png';
 import play from '../assets/play.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import VideoModal from '../components/VideoModal';
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
+  const [addAnimation, setAddAnimation] = useState(true);
   const setShowModalHandler = (flag) => {
     setShowModal(flag);
     let ele = document.getElementsByTagName('body')[0];
@@ -14,6 +15,14 @@ export default function HomePage() {
       ele.classList.remove('overflow-hidden');
     else ele.classList.add('overflow-hidden');
   };
+  useEffect(() => {
+    let interval = setTimeout(() => {
+      setAddAnimation(false);
+    }, 2000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
   return (
     <Container
       className='bg-white-secondary'
@@ -22,7 +31,7 @@ export default function HomePage() {
       <div className='pt-[20px] pb-[50px] flex xl:gap-[40px] lg:gap-[18px] justify-center sm:flex-row flex-col items-center '>
         <div className='flex flex-col pb-8'>
           <div className='xl:max-w-[600px] lg:max-w-[500px] sm:max-w-[300px] lg:mb-[48px] mb-[32px] '>
-            <h1 className='xl:text-7xl lg:text-6xl md:text-4xl text-3xl font-poppins font-bold text-black mb-6'>
+            <h1 className='xl:text-7xl lg:text-6xl md:text-4xl text-3xl font-poppins font-bold text-black mb-6 hero-text'>
               The Biggest Jackpots
             </h1>
             <p className='xl:text-xl lg:text-base md:text-sm font-poppins font-light text-dark-secondary'>

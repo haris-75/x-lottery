@@ -6,12 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 
-@mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-}
-
-$animationSpeed: 40s; */
+/* Marquee Animation */
 
 @keyframes scroll {
   0% {
@@ -63,5 +58,28 @@ $animationSpeed: 40s; */
 
   .slide {
     width: 250px;
+  }
+}
+
+/* Hero Text Animation */
+
+.hero-text {
+  animation: 2s anim-lineUp ease-out 0.2s;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
