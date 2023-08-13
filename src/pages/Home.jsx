@@ -1,7 +1,7 @@
 import HomePageImage from '../assets/hero-image.png';
 import Container from '../components/Container';
 import googlePlay from '../assets/googleplay.png';
-import appStore from '../assets/googleplay.png';
+import appStore from '../assets/appstore.png';
 import play from '../assets/play.png';
 import { useState } from 'react';
 import VideoModal from '../components/VideoModal';
@@ -33,20 +33,28 @@ export default function HomePage() {
           </div>
 
           <div className='flex md:gap-8 gap-2 sm:justify-normal justify-center'>
-            <div>
+            <a
+              href='https://play.google.com/store'
+              target='_blank'
+              rel='noreferrer'
+            >
               <img
-                className='lg:w-[120px] md:w-[100px] w-[100px]'
+                className='lg:w-[162px] w-[108px]'
                 src={googlePlay}
                 alt='google-play-button'
               />
-            </div>
-            <div>
+            </a>
+            <a
+              href='https://www.apple.com/app-store'
+              target='_blank'
+              rel='noreferrer'
+            >
               <img
-                className='lg:w-[120px] md:w-[100px] w-[100px]'
+                className='lg:w-[150px] w-[100px]'
                 src={appStore}
                 alt='app-store-button'
               />
-            </div>
+            </a>
           </div>
         </div>
         <div className='my-auto relative xl:w-[840px] lg:w-[740px] md:w-[480px] sm:w-[250px]'>

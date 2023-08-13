@@ -35,34 +35,64 @@ const ItemCard = ({ title, text }) => (
   </div>
 );
 
-export default function WhyPage() {
-  return (
-    <Container id='cooperation'>
-      <div className='flex flex-col justify-between items-center pt-[50px] pb-[150px] md:gap-6 gap-5'>
-        <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
-          Why Choose xLottery
-        </h1>
-        <div className='flex md:flex-row flex-col lg:gap-16 md:gap-12 gap-8'>
-          <div className='flex flex-col gap-2'>
-            {itemsArray1?.map(({ title, text }) => (
-              <ItemCard
-                key={title}
-                title={title}
-                text={text}
-              />
-            ))}
-          </div>
-          <div className='flex flex-col gap-2'>
-            {itemsArray2?.map(({ title, text }) => (
-              <ItemCard
-                key={title}
-                title={title}
-                text={text}
-              />
-            ))}
-          </div>
+const WhyTextContainer = () => (
+  <Container>
+    <div className='flex flex-col justify-between items-center pt-[50px] pb-[150px] md:gap-6 gap-5 text-white'>
+      <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
+        Why Choose xLottery
+      </h1>
+      <div className='flex md:flex-row flex-col lg:gap-16 md:gap-12 gap-8'>
+        <div className='flex flex-col gap-2'>
+          {itemsArray1?.map(({ title, text }) => (
+            <ItemCard
+              key={title}
+              title={title}
+              text={text}
+            />
+          ))}
+        </div>
+        <div className='flex flex-col gap-2'>
+          {itemsArray2?.map(({ title, text }) => (
+            <ItemCard
+              key={title}
+              title={title}
+              text={text}
+            />
+          ))}
         </div>
       </div>
-    </Container>
+    </div>
+  </Container>
+);
+
+const WinTextContainer = () => (
+  <div className='relative sm:absolute sm:top-0 text-center py-4 sm:m-0 m-auto sm:w-1/2 h-full sm:left-1/2'>
+    <div className='relative sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 text-center w-[70%] max-w-[800px] sm:text-white text-dark py-4 sm:m-0 m-auto '>
+      <h1 className='font-bold xl:text-6xl lg:text-5xl md:text-4xl text-2xl lg:mb-7 md:mb-4 mb-2'>
+        Eleifend, viverra erat a tempus.
+      </h1>
+      <p className='lg:text-base text-sm'>
+        It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was
+        popularised in the 1960s with the release of Letraset sheets.It has
+        survived not only five centuries.
+      </p>
+    </div>
+  </div>
+);
+
+export default function WhyPage() {
+  return (
+    <section id='cooperation'>
+      <div className='parallax-prize'>
+        <Container className='relative xl:h-[800px] lg:h-[700px] md:h-[500px] sm:h-[350px] h-[250px]'>
+          <WinTextContainer />
+        </Container>
+      </div>
+
+      <div className='parallax-prize gradient'>
+        <WhyTextContainer />
+      </div>
+    </section>
   );
 }
