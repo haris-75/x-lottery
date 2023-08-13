@@ -17,20 +17,6 @@ export default {
         card: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)',
         btn: '0px 8px 24px 0px rgba(286, 80, 13, 0.5)',
       },
-      animation: {
-        marquee: 'marquee 25s linear infinite',
-        marquee2: 'marquee2 25s linear infinite',
-      },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-        marquee2: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0%)' },
-        },
-      },
     },
     screens: {
       xs: '380px',
