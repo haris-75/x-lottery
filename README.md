@@ -1,8 +1,15 @@
-# React + Vite
+# xLottery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page for a lottery service.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Node.js > 16](https://nodejs.org) and npm (Recommended: Use [nvm](https://github.com/nvm-sh/nvm))
+
+### Running the Project
+
+To run the project, execute following command:
+
+```bash
+./src/run.sh
+```
