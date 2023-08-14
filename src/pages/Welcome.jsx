@@ -14,7 +14,7 @@ const ItemCard = ({ text, cardOpen, setCardOpen }) => {
       } justify-between max-w-[500px] gap-2`}
     >
       <div className='flex justify-between'>
-        <h1 className='font-semibold lg:text-base md:text-sm text-xs ml-2'>
+        <h1 className='font-semibold lg:text-base md:text-sm sm:text-xs text-[12px] ml-2'>
           {text}
         </h1>
 
@@ -48,7 +48,7 @@ const WelcomeContainer = () => {
   const [cardOpen, setCardOpen] = useState('');
   return (
     <div className='flex md:flex-row flex-col justify-between items-center pt-[50px] pb-[50px] md:gap-0 gap-6 '>
-      <div className='flex flex-col gap-8 text-white'>
+      <div className='flex flex-col gap-8 sm:text-white'>
         <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
           Welcome to xLottery
         </h1>
@@ -79,7 +79,7 @@ const WelcomeContainer = () => {
           />
         </div>
       </div>
-      <div className='flex flex-col gap-4 md:w-[50%] sm:w-[80%] w-full  items-end'>
+      <div className='flex flex-col gap-4 md:w-[50%] sm:w-[80%] w-full sm:items-end items-center'>
         {[
           'Lorem Ipsum is simply dummy text',
           'Lorem Ipsum has been the industry standard',
@@ -105,7 +105,7 @@ const WomenAdTextContainer = () => (
       <h1 className='font-bold xl:text-6xl lg:text-5xl md:text-4xl text-2xl lg:mb-7 md:mb-4 mb-2'>
         Donec in metus eleifend, viverra erat a, tempus metus.
       </h1>
-      <p className='lg:text-base text-sm'>
+      <p className='lg:text-base sm:text-sm text-[12px]'>
         It has survived not only five centuries, but also the leap into
         electronic typesetting, remaining essentially unchanged. It was
         popularised in the 1960s with the release of Letraset sheets.It has
@@ -118,14 +118,14 @@ const WomenAdTextContainer = () => (
 
 export default function WelcomePage() {
   return (
-    <section id='welcome'>
-      <div className='parallax-women'>
+    <section id='cooperation'>
+      <div className='bg-women h-full bg-center bg-no-repeat bg-cover sm:bg-fixed'>
         <Container className='relative xl:h-[800px] lg:h-[700px] md:h-[500px] sm:h-[350px] h-[250px]'>
           <WomenAdTextContainer />
         </Container>
       </div>
 
-      <div className='parallax-women'>
+      <div className='sm:bg-women sm:h-full sm:bg-center sm:bg-no-repeat sm:bg-cover sm:bg-fixed'>
         <Container>
           <WelcomeContainer />
         </Container>

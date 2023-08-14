@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <Container
       className='bg-black'
-      id='support'
+      id='contact'
     >
       <div className='pt-[20px] pb-[50px] flex md:flex-row flex-col justify-between lg:gap-12 md:gap-8 '>
         <FooterForm />

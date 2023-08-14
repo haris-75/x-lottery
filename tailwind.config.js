@@ -6,6 +6,12 @@ export default {
       poppins: ['Poppins'],
     },
     extend: {
+      backgroundImage: {
+        women: "url('/src/assets/labybg.png')",
+        win: "url('/src/assets/bigwinbg.png')",
+        'win-gradient':
+          "linear-gradient(to right,rgb(108 6 88),rgb(108 6 88 / 40%)),url('/src/assets/bigwinbg.png')",
+      },
       colors: {
         dark: '#34343c',
         black: '#000000',

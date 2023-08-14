@@ -37,7 +37,7 @@ const ItemCard = ({ title, text }) => (
 
 const WhyTextContainer = () => (
   <Container>
-    <div className='flex flex-col justify-between items-center pt-[50px] pb-[150px] md:gap-6 gap-5 text-white'>
+    <div className='flex flex-col justify-between items-center pt-[50px] pb-[150px] md:gap-6 gap-5 sm:text-white'>
       <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
         Why Choose xLottery
       </h1>
@@ -66,12 +66,12 @@ const WhyTextContainer = () => (
 );
 
 const WinTextContainer = () => (
-  <div className='relative sm:absolute sm:top-0 text-center py-4 sm:m-0 m-auto sm:w-1/2 h-full sm:left-1/2'>
-    <div className='relative sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 text-center w-[70%] max-w-[800px] sm:text-white text-dark py-4 sm:m-0 m-auto '>
-      <h1 className='font-bold xl:text-6xl lg:text-5xl md:text-4xl text-2xl lg:mb-7 md:mb-4 mb-2'>
+  <div className=' absolute top-0 text-center py-4 m-0 w-1/2 h-full left-1/2'>
+    <div className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[70%] max-w-[800px] text-white py-4 sm:m-0 m-auto '>
+      <h1 className='font-bold xl:text-6xl lg:text-5xl md:text-4xl sm:text-2xl xs:text-base xs:leading-4 text-sm lg:mb-7 md:mb-4 mb-2'>
         Eleifend, viverra erat a tempus.
       </h1>
-      <p className='lg:text-base text-sm'>
+      <p className='lg:text-base sm:text-sm xs:text-xs text-[8px] leading-3'>
         It has survived not only five centuries, but also the leap into
         electronic typesetting, remaining essentially unchanged. It was
         popularised in the 1960s with the release of Letraset sheets.It has
@@ -83,14 +83,13 @@ const WinTextContainer = () => (
 
 export default function WhyPage() {
   return (
-    <section id='cooperation'>
-      <div className='parallax-prize'>
+    <section id='support'>
+      <div className='bg-win h-full bg-center bg-no-repeat bg-cover sm:bg-fixed'>
         <Container className='relative xl:h-[800px] lg:h-[700px] md:h-[500px] sm:h-[350px] h-[250px]'>
           <WinTextContainer />
         </Container>
       </div>
-
-      <div className='parallax-prize gradient'>
+      <div className='sm:bg-win-gradient sm:h-full sm:bg-center sm:bg-no-repeat sm:bg-cover sm:bg-fixed'>
         <WhyTextContainer />
       </div>
     </section>

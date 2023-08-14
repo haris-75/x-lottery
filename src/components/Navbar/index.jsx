@@ -19,7 +19,7 @@ export default function Navbar() {
               alt='logo'
             />
           </div>
-          <ul className='md:flex lg:gap-12 md:gap-8 text-black font-light xl:text-base md-lg:text-sm md:text-xs items-center hidden'>
+          <ul className='md:flex lg:gap-12 md-lg:gap-8 md:gap-6 text-black font-light xl:text-base md-lg:text-sm md:text-xs items-center hidden'>
             {navList?.map((ele) => (
               <li
                 key={ele}
@@ -78,9 +78,10 @@ export default function Navbar() {
                       ? 'font-semibold border-b-2 border-yellow-400'
                       : ''
                   }
-                  inline-block cursor-pointer pt-9 font-secondary-font text-md uppercase transition-all             `}
+                  inline-block cursor-pointer pt-9 font-secondary-font text-md uppercase transition-all`}
+                  onClick={() => setSelectedPage(ele)}
                 >
-                  {ele}
+                  <a href={`#${ele}`}>{ele}</a>
                 </div>
               </div>
             </li>
