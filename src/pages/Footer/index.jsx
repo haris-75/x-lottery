@@ -60,7 +60,7 @@ export default function Footer() {
             <div className='flex gap-4 py-2 '>
               <div>
                 <Button
-                  iconClass='ml-[5px] my-[0.1rem]'
+                  iconClass='lg:ml-[5px] lg:my-[0.1rem] ml-[3px] sm:my-0 -my-[1px]'
                   backgroundColor='bg-primary'
                   icon={fb}
                 />
