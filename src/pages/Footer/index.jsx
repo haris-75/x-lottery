@@ -15,9 +15,15 @@ const AddressComponent = ({ title, textPrimary, textSecondary }) => (
       backgroundColor='bg-primary'
       icon={loc}
     />
-    <h1 className='text-xs py-2'>{title}</h1>
-    <p>{textPrimary}</p>
-    <p>{textSecondary}</p>
+    <h1 className='sm:text-xs xs:text-[10px] xs:leading-[10px] text-[8px] leading-[8px] py-2'>
+      {title}
+    </h1>
+    <p className='sm:text-base xs:text-sm xs:leading-4 text-xs leading-3'>
+      {textPrimary}
+    </p>
+    <p className='sm:text-base xs:text-sm xs:leading-4 text-xs leading-3'>
+      {textSecondary}
+    </p>
   </div>
 );
 
@@ -87,7 +93,9 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p>CopyRights 2022 xlottery. All Rights Reserved</p>
+            <p className='sm:text-base xs:text-sm text-xs'>
+              CopyRights 2022 xlottery. All Rights Reserved
+            </p>
           </div>
         </div>
       </div>
