@@ -48,7 +48,7 @@ const WelcomeContainer = () => {
   const [cardOpen, setCardOpen] = useState('');
   return (
     <div className='flex md:flex-row flex-col justify-between items-center pt-[50px] pb-[50px] md:gap-0 gap-6 '>
-      <div className='flex flex-col gap-8 sm:text-white'>
+      <div className='flex flex-col gap-8 '>
         <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
           Welcome to xLottery
         </h1>
@@ -125,7 +125,7 @@ export default function WelcomePage() {
         </Container>
       </div>
 
-      <div className='sm:bg-women sm:h-full sm:bg-center sm:bg-no-repeat sm:bg-cover sm:bg-fixed'>
+      <div>
         <Container>
           <WelcomeContainer />
         </Container>

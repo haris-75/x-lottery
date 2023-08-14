@@ -37,7 +37,7 @@ const ItemCard = ({ title, text }) => (
 
 const WhyTextContainer = () => (
   <Container>
-    <div className='flex flex-col justify-between items-center pt-[50px] pb-[150px] md:gap-6 gap-5 sm:text-white'>
+    <div className='flex flex-col justify-between items-center pt-[50px] pb-[150px] md:gap-6 gap-5 '>
       <h1 className='font-semibold lg:text-4xl md:text-2xl text-xl'>
         Why Choose xLottery
       </h1>
@@ -89,7 +89,7 @@ export default function WhyPage() {
           <WinTextContainer />
         </Container>
       </div>
-      <div className='sm:bg-win-gradient sm:h-full sm:bg-center sm:bg-no-repeat sm:bg-cover sm:bg-fixed'>
+      <div>
         <WhyTextContainer />
       </div>
     </section>
